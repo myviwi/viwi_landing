@@ -1,4 +1,18 @@
-node_modules/
-static/
-.DS_Store
-.idea/
+
+# Always-ignore files
+npm-debug.log
+*.sublime-*
+*.zip
+*.rar
+TODO.md
+
+# Always-ignore folders
+/docs
+_gh_pages
+node_modules
+src/generate
+src/templates/pages/docs/drafts
+tasks
+temp
+tmp
+vendor
