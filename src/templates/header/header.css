@@ -119,6 +119,7 @@ border: 0;
 }
 
 .btn-gradient{
+      float: right;
       margin-left: -4px;
       border-radius: 0px 5px 5px 0px;
       color: white;
@@ -138,6 +139,10 @@ border: 0;
 	max-width: 170px;
 	width: calc(100% - 2em);
 	vertical-align: top;
+
+  @media (max-width: 1500px) {
+           display: none;
+       }
 }
 
 .input__field {
