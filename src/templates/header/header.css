@@ -8,6 +8,11 @@ body{
 
 }
 
+.line {
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%);
+}
 
 /* HEADER */
 header {
