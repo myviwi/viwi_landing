@@ -16,6 +16,7 @@ const gulpif = require('gulp-if');
 const stylelint = require('stylelint');
 const reporter = require('postcss-reporter');
 const eslint = require('gulp-eslint');
+const lost = require('lost');
 
 const config = require('./config');
 const rulesStyles = require('./stylelintrc.json');
@@ -30,7 +31,7 @@ const paths = {
     scripts: ['./src/**/*.js'],
     scriptsLint: ['**/*.js', '!node_modules/**/*', '!static/**/*'],
     templates: 'src/templates/**/*.hbs',
-    assets: 'src/**/*.png',
+    assets: './src/assets/*',
     contextJson: 'src/test.json'
 };
 
@@ -91,6 +92,7 @@ const processors = [
     assets,
     nested,
     cssShort,
+    lost,
     autoprefixer({ browsers: ['last 2 version'] })
 ];
 if (config.env === 'production') { processors.push(cssnano); }
