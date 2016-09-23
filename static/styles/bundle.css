@@ -178,7 +178,7 @@
   color: linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%);
   background-color: transparent;
 	font-weight: 700;
-	font-family: "Gotham Rounded", Helvetica, Arial, sans-serif;
+	font-family: "Gotham Rounded Book", Helvetica, Arial, sans-serif;
 	-webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
@@ -238,7 +238,9 @@
 	z-index: 1000;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%) transparent;
+	background: url('../assets/logo_white.svg'), linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%) transparent;
+  background-repeat: no-repeat;
+  background-position: 48% 30%;
 	opacity: 0;
 	transition: opacity 0.3s;
 	pointer-events: none;
@@ -269,43 +271,49 @@
 }
 
 
-.center {
-  margin-top: 20px;
-  padding-top: 20px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-
-
-}
-
-
-.center:before {
-	content: '';
-	display: table;
-
-}
-
-
-.center:after {
-	content: '';
-	display: table;
-	clear: both;
-
-}
 
 .early_access{
 background: #E8E8E8;
 width: 100%;
 text-align: center;
-height: 400px;
+padding-bottom: 30px;
 }
+
+
 
 .early_access h2 {
 	text-align: center;
 	font-family: 'Gotham Rounded', Helvetica, sans-serif;
 	font-size: 26px;
 	font-weight: 500;
+
+}
+
+
+
+.early_access .center {
+	margin-top: 20px;
+	padding-top: 20px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+
+.early_access .center:before {
+	content: '';
+	display: table;
+
+}
+
+
+
+.early_access .center:after {
+	content: '';
+	display: table;
+	clear: both;
 
 }
 
@@ -332,6 +340,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 
 body{
   margin: 0;
+  overflow-y: auto;
 
 }
 
