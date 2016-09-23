@@ -266,6 +266,24 @@ header .row:after {
 }
 
 
+@media (max-width: 1070px) {
+       header .row {
+              max-width: 900px;
+              margin-left: auto;
+              margin-right: auto;
+       }
+       header .row:before {
+              content: '';
+              display: table;
+       }
+       header .row:after {
+              content: '';
+              display: table;
+              clear: both;
+       }
+}
+
+
 header .row h1 {
        font-family: 'Gotham Rounded', Helvetica, sans-serif;
        font-weight: 500;
@@ -278,11 +296,25 @@ header .row h1 {
 }
 
 
+@media (max-width: 1070px) {
+       header .row h1 {
+              font-size: 20px;
+       }
+}
+
+
 header .row h2 {
        text-align: center;
        font-family: 'Gotham Rounded Book', Helvetica, sans-serif;
        font-size: 16px;
        line-height: 0px;
+}
+
+
+@media (max-width: 1070px) {
+       header .row h2 {
+              font-size: 12px;
+       }
 }
 
 
@@ -312,6 +344,31 @@ header .row .left:nth-child(3n) {
 
 header .row .left:nth-child(3n + 1) {
        clear: both;
+}
+
+
+@media (max-width: 950px) {
+       header .row .left {
+              margin-bottom: 0px;
+       }
+}
+
+
+@media (max-width: 615px) {
+       header .row .left {
+              margin-left: auto;
+              margin-right: auto !important;
+              margin-bottom: 20px;
+              width: 215px;
+              float: inherit  !important;
+       }
+}
+
+
+@media (max-width: 1070px) {
+       header .row .left img {
+              width: 200px;
+       }
 }
 
 
@@ -387,11 +444,18 @@ border: 0;
 }
 
 .btn-gradient{
+
       float: right;
       margin-left: -4px;
       border-radius: 0px 5px 5px 0px;
       color: white;
       background: linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%) transparent;
+}
+
+@media (max-width: 615px) {
+       .btn-gradient {
+              display: none;
+       }
 }
 
 .btn:hover{
@@ -571,6 +635,23 @@ border: 0;
 @media (max-width: 1320px) {
        .video {
               max-width: 1000px;
+              margin-left: auto;
+              margin-right: auto;
+       }
+       .video:before {
+              content: '';
+              display: table;
+       }
+       .video:after {
+              content: '';
+              display: table;
+              clear: both;
+       }
+}
+
+@media (max-width: 1070px) {
+       .video {
+              max-width: 800px;
               margin-left: auto;
               margin-right: auto;
        }
