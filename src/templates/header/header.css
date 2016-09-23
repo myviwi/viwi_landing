@@ -116,7 +116,6 @@ header .row{
       }
 
       .right{
-        width: 335px;
         top: 120px;
         right:80px;
         position: absolute;
@@ -136,7 +135,7 @@ input{
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  padding: 9px;
+  padding: 5px 0px 5px 0px;
   border-radius: 3px;
   transition: none;
   border-width: 1px;
@@ -146,6 +145,7 @@ border-image: initial;
 }
 
 
+
 .btn{
 font-family: 'Gotham Rounded', "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight: 700;
@@ -153,7 +153,6 @@ font-size: 12px;
 line-height: 15px;
 letter-spacing: 1px;
 text-transform: uppercase;
-display: inline-block;
 transition: all 0.3s ease;
 border-radius: 5px;
 padding: 13px 28px;
@@ -168,7 +167,7 @@ border: 0;
 
       float: right;
       margin-left: -4px;
-      border-radius: 0px 5px 5px 0px;
+      border-radius: 5px 5px 5px 5px;
       color: white;
       background: linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%) transparent;
 }
@@ -178,147 +177,6 @@ border: 0;
   background-color: transparent;
 }
 
-
-.input {
-	position: relative;
-	z-index: 1;
-	display: inline-block;
-	max-width: 170px;
-	width: calc(100% - 2em);
-	vertical-align: top;
-
-  @media (max-width: 1500px) {
-           display: none;
-       }
-}
-
-.input__field {
-	position: relative;
-	display: block;
-	float: right;
-	padding: 0.8em;
-	width: 60%;
-	border: none;
-	border-radius: 0;
-	background: #f0f0f0;
-  color: linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%) transparent;
-	font-weight: bold;
-	font-family: "Gotham Rounded", Helvetica, Arial, sans-serif;
-	-webkit-appearance: none; /* for box shadows to show on iOS */
-}
-
-.input__field:focus {
-	outline: none;
-}
-
-.input__label {
-	display: inline-block;
-	float: right;
-	padding: 0 1em;
-	width: 40%;
-  color: rgb(0, 108, 168);
-	font-weight: bold;
-	font-size: 70.25%;
-	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-  font-family: "Gotham Rounded", Helvetica, Arial, sans-serif;
-
-}
-
-.input__label-content {
-	position: relative;
-	display: block;
-	padding: 1.6em 0;
-	width: 100%;
-}
-
-/* Isao */
-.input__field--isao {
-	z-index: 10;
-	padding: 0;
-	width: 100%;
-	background: #fff;
-  color: rgb(0, 108, 168);
-}
-
-.input__label--isao {
-	position: relative;
-	overflow: hidden;
-	padding: 0;
-	width: 100%;
-	color: #000;
-	text-align: left;
-}
-
-.input__label--isao::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 3px;
-	background: #fff;
-	-webkit-transform: scale3d(1, 0.4, 1);
-	transform: scale3d(1, 0.4, 1);
-	-webkit-transform-origin: 50% 100%;
-	transform-origin: 50% 100%;
-	-webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
-	transition: transform 0.3s, background-color 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.input__label--isao::after {
-	content: attr(data-content);
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 0.75em 0.15em;
-  color: rgb(0, 108, 168);
-	opacity: 0;
-	-webkit-transform: translate3d(0, 50%, 0);
-	transform: translate3d(0, 50%, 0);
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	pointer-events: none;
-}
-
-.input__field--isao:focus + .input__label--isao::before {
-  background: linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%) transparent;
-	-webkit-transform: scale3d(1, 1, 1);
-	transform: scale3d(1, 1, 1);
-}
-
-.input__field--isao:focus + .input__label--isao {
-	pointer-events: none;
-}
-
-.input__field--isao:focus + .input__label--isao::after {
-	opacity: 1;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-}
-
-.input__label-content--isao {
-	padding: 0.75em 0.15em;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.input__field--isao:focus + .input__label--isao .input__label-content--isao {
-	opacity: 0;
-	-webkit-transform: translate3d(0, -50%, 0);
-	transform: translate3d(0, -50%, 0);
-}
 
 .video{
     margin-top: 30px;
