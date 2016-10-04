@@ -1,0 +1,203 @@
+@namespace lostgrid;
+@lost flexbox flex;
+
+.profiles {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	position: relative;
+	display:block;
+	width: 100%;
+	background: rgba(255,255,255,0.7);
+	background-repeat: repeat;
+}
+
+.profiles:after{
+  content: "";
+  background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/worn_dots.png) rgba(0, 0, 0, 0.701961);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.profiles_box{
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	flex-flow: row-reverse wrap;
+}
+
+.charts{
+	display: flex;
+  align-items: center;
+  justify-content: space-around;;
+	flex-flow: row-reverse wrap;
+	opacity: 0;
+
+}
+
+.chart{
+	text-align: center;
+	width: 65px;
+}
+
+
+div.snip1093 {
+	font-family: 'Gotham Rounded', Helvetica, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 310px;
+  width: 100%;
+  background: #000000;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+}
+
+div.snip1093 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+div.snip1093 img {
+  max-width: 100%;
+  position: relative;
+  top: 0;
+	image-orientation: 90deg flip;
+}
+
+div.snip1093 h2 {
+	font-family: 'Gotham Rounded', Helvetica, sans-serif;
+	font-size: 14px;
+  left: 15px;
+  color: #FFFFFF;
+  bottom: 12px;
+  margin: 0;
+  z-index: 1;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+div.snip1093 p {
+	font-family: 'Gotham Rounded', Helvetica, sans-serif;
+	font-size: 9px;
+  left: 15px;
+  color: #FFFFFF;
+  bottom: 12px;
+
+  margin: 0;
+  z-index: 1;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+div.snip1093 h2 span {
+  font-weight: 800;
+}
+
+div.snip1093 > div {
+	height: 45%;
+  width: 100%;
+  bottom: -70px;
+  position: absolute;
+  padding: 5px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);;
+  text-align: left;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.bordertest{
+	border-top:3px solid;
+	border-top-color: rgb(0, 109, 168);
+
+
+
+}
+
+
+div.snip1093 > div a i {
+  font-size: 24px;
+  color: white;
+  padding: 0px 8px;
+  position: relative;
+  bottom: -60px;
+}
+
+div.snip1093 a {
+  opacity: 0.8;
+  -webkit-transition-property: none;
+  transition-property: none;
+}
+
+div.snip1093 a:hover {
+  opacity: 1;
+}
+
+div.snip1093:hover img,
+div.snip1093.hover img {
+  opacity: 0.5;
+}
+
+div.snip1093:hover h2,
+div.snip1093.hover h2 {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+div.snip1093:hover .charts,
+div.snip1093.hover .charts {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+
+div.snip1093:hover > div,
+div.snip1093.hover > div {
+  bottom: 0;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+div.snip1093:hover > div a i,
+div.snip1093.hover > div a i {
+  bottom: 0;
+}
+
+div.snip1093:hover a:first-child i,
+div.snip1093.hover a:first-child i {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+div.snip1093:hover a:nth-child(2) i,
+div.snip1093.hover a:nth-child(2) i {
+  -webkit-transition-delay: 0.35s;
+  transition-delay: 0.35s;
+}
+
+div.snip1093:hover a:nth-child(3) i,
+div.snip1093.hover a:nth-child(3) i {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+
+
+.chart_label{
+	font-size: 8px  !important;
+	font-weight: 400 !important;
+	padding-bottom:10px;
+
+}
