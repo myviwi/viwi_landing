@@ -17,11 +17,16 @@ const stylelint = require('stylelint');
 const reporter = require('postcss-reporter');
 const eslint = require('gulp-eslint');
 const lost = require('lost');
-
+const cleanCSS = require('gulp-clean-css');
 const config = require('./config');
 const rulesStyles = require('./stylelintrc.json');
 const rulesScripts = require('./eslintrc.json');
 const templateContext = require('./src/test.json');
+const gzip = require('gulp-gzip');
+const tar = require('gulp-tar');
+const imagemin = require('gulp-imagemin');
+const useref = require('gulp-useref');
+const uncss = require('gulp-uncss');
 
 const paths = {
     baseDir: './src',
@@ -81,6 +86,7 @@ gulp.task('compile', () => {
             gulp.src(`${paths.baseDir}/index.hbs`)
                 .pipe(handlebars(templateContext, options))
                 .pipe(rename('index.html'))
+                .pipe(useref())
                 .pipe(gulp.dest(paths.buildDir));
         } else {
             throw err;
@@ -109,13 +115,14 @@ gulp.task('styles', () => {
     gulp.src(paths.styles)
         .pipe(postcss(processors))
         .pipe(concat('styles/bundle.css'))
+        .pipe(cleanCSS())
         .pipe(gulp.dest(paths.buildDir));
 });
 
 gulp.task('scripts', () => {
     gulp.src(paths.scripts)
         .pipe(concat('js/script.js'))
-        .pipe(gulpif(config.env === 'production', uglify()))
+        .pipe(uglify())
         .pipe(gulp.dest(paths.buildDir));
 });
 
@@ -142,12 +149,14 @@ gulp.task('assets', () => {
     glob(paths.assets, (err, files) => {
         if (!err) {
             gulp.src(files)
+                .pipe(imagemin())
                 .pipe(gulp.dest(`${paths.buildDir}/assets`));
         } else {
             throw err;
         }
     });
 });
+
 
 gulp.task('watch', () => {
     gulp.watch(paths.handlebars, ['compile']);

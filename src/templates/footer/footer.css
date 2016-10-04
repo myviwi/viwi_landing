@@ -1,8 +1,274 @@
-.footer {
-    background: inline('./assets/vk5.svg');
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    height: 150px;
-    opacity: .5;
+
+.footer-distributed > h1,h2,h3{
+	font-family: 'Gotham Rounded', Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: medium;
+
+
+}
+
+
+.footer-distributed{
+	background: linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%);
+	padding: 55px 50px;
+	lost-utility: clearfix;
+
+
+
+}
+
+.footer-center {
+	/* footer */
+	.input--footer {
+		z-index: auto;
+		text-align: center;
+	}
+
+	.input {
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+		max-width: 700px;
+		width: calc(100% - 2em);
+		vertical-align: top;
+
+	}
+
+	.input__field {
+	  text-align: center;
+		position: relative;
+		width: 232px;
+		border: none;
+		border-radius: 0;
+		background: #f0f0f0;
+	  color: linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%) transparent;
+		font-weight: bold;
+		font-family: "Gotham Rounded Book", Helvetica, Arial, sans-serif;
+		-webkit-appearance: none; /* for box shadows to show on iOS */
+	}
+
+	.input__field:focus {
+		outline: none;
+	}
+
+	.input__label {
+		display: inline-block;
+		float: right;
+		padding: 0 1em;
+		width: 35%;
+	  color: rgb(0, 108, 168);
+		font-weight: bold;
+		font-size: 70.25%;
+		-webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	  font-family: "Gotham Rounded", Helvetica, Arial, sans-serif;
+
+	}
+
+	.input__label-content {
+		position: relative;
+		display: block;
+		padding: 1.6em 0;
+		width: 100%;
+	}
+
+
+	/* footer */
+	.input--footer {
+		z-index: auto;
+	}
+
+	.input__field--footer {
+		border-radius: 5px;
+		background: #fff;
+		color: #535d92;
+	}
+
+	.input__label--footer {
+		z-index: 0;
+		padding: 0 0 0 2em;
+		text-align: left;
+	}
+
+
+	.input__label-content--footer {
+		padding: 0.5em 0;
+	}
+
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	lost-column: 1/3 no-flex;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  #ffffff;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 45px;
+	font-family: "Gotham Rounded Book", Helvetica, Arial, sans-serif;
+
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	lost-column: 1/3 no-flex;
+
+
+}
+
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center h2{
+
+	color: #ffffff;
+	margin-bottom:20px;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #ffffff;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	lost-column: 1/3 no-flex;
+	text-align: justify;
+}
+
+.footer-company-about{
+	p{
+	line-height: 20px;
+	color:  #ffffff;
+	font-size: 13px;
+	font-weight: 300;
+	margin: 0;
+}
+}
+
+.footer-company-about{
+		width: 70%;
+		float: right;
+		font-family: 'Gotham Rounded', Helvetica, sans-serif;
+
+}
+
+
+.footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 10px;
+	float: left;
+
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #ffffff;
+	border-radius: 2px;
+	font-size: 20px;
+	color: black;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+	.footer-company-about{
+			width: 100%;
+			font-family: 'Gotham Rounded', Helvetica, sans-serif;
+
+	}
+
+	.footer-distributed .footer-icons{
+		margin-top: 10px;
+		display: block;
+		width: 100%;
+	}
+
 }
