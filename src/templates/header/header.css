@@ -29,7 +29,7 @@ header {
 
 header:after{
   content: "";
-  background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/worn_dots.png) rgba(0, 0, 0, 0.701961);
+  background: url('../assets/worn_dots.png') rgba(0, 0, 0, 0.701961);
   top: 0;
   left: 0;
   bottom: 0;
