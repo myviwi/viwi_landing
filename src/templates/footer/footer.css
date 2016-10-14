@@ -13,7 +13,9 @@
 	padding: 55px 50px;
 	lost-utility: clearfix;
 
-
+	@media (max-width: 880px) {
+		padding: 55px 0px;
+	}
 
 }
 

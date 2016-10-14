@@ -1,12 +1,12 @@
 /*GLOBALS*/
+
 a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
-       cursor: pointer;
+    cursor: pointer;
 }
 
-body{
-  margin: 0;
-  overflow-y: auto;
-
+body {
+    margin: 0;
+    overflow-y: auto;
 }
 
 .line {
@@ -15,188 +15,253 @@ body{
     background: linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%);
 }
 
+
 /* HEADER */
+
 header {
     margin: 0;
     position: relative;
-    display:block;
+    display: block;
     width: 100%;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.7);
     background-repeat: repeat;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
+
 
 }
 
-header:after{
-  content: "";
-  background: url('../assets/worn_dots.png') rgba(0, 0, 0, 0.701961);
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+header:after {
+    content: "";
+    background: url('../assets/worn_dots.png') rgba(0, 0, 0, 0.701961);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 
-
-header .row{
-  lost-center:1480px;
-
-
-
-  @media (max-width: 1500px) {
-    lost-center:1300px;
-       }
-
-  @media (max-width: 1320px) {
-         lost-center:1100px;
-         }
-
-  @media (max-width: 1070px) {
-         lost-center:900px;
-     }
-
+header .row {
   padding-top: 50px;
+  display:flex;
+  justify-content:space-between;
+  lost-center: 1480px;
+  height:160px;
 
-      h1 {
+
+    h1 {
         font-family: 'Gotham Rounded', Helvetica, sans-serif;
         font-weight: medium;
         font-size: 25px;
-        background: rgba(238, 238, 238,0.8);
+        background: rgba(238, 238, 238, 0.8);
         border-radius: 5px;
-        display:inline-block;
+        display: inline-block;
         padding: 8px 12px 8px 12px;
         margin: 0;
 
-        @media (max-width: 1070px) {
-               font-size:20px;
-           }
-
-      }
-      h2 {
+    }
+    h2 {
         text-align: center;
         font-family: 'Gotham Rounded Book', Helvetica, sans-serif;
         font-size: 16px;
         line-height: 0px;
 
-        @media (max-width: 1070px) {
-               font-size:12px;
-           }
+    }
+    .left {
+        flex: 1 0 0;
+        align-self:flex-start;
 
-      }
-
-      .left{
-        lost-column: 1/3;
-        margin-bottom: -30px;
-
-        @media (max-width: 950px) {
-               margin-bottom:0px;
-           }
-        @media (max-width: 615px) {
-          margin-left:auto;
-          margin-right:auto !important;
-          margin-bottom:20px;
-          width:215px;
-          float: inherit  !important;
-              }
+    }
+    .center {
+        align-self:flex-end;
+        text-align: center;
+    }
+    .right {
+        margin-top:25px;
+        flex: 1 0 0;
+        align-self:center;
 
 
+    }
 
-        img{
-        @media (max-width: 1070px) {
-               width:200px;
-           }
-         }
-      }
+    @media (max-width: 1480px) {
+      lost-center: 1280px;
+      padding-top:50px;
 
-      .center{
-      lost-column: 1/3;
-      float:right;
-      width: 100%;
-      height: 60px;
-      text-align: center;
+        }
 
-      }
+    @media (max-width: 1280px) {
+        padding-top:30px;
+        lost-center: 1080px;
+        .left > .img-responsive {
+          width:200px;
+          margin-right:5px;
+        }
+        .center{
+          margin-top:50px;
+        }
 
-      .right{
-        top: 120px;
-        right:80px;
-        position: absolute;
+        .center > h1{
+          font-size:24px;
+        }
+        .center > h2{
+          font-size:16px;
+        }
+    }
 
 
-      }
+    @media (max-width: 1000px) {
+        lost-center: 720px;
+        .left {
+          text-align:center;
+        }
+        .left > .img-responsive {
+          width:200px;
+          margin-right:5px;
+        }
+        .center{
+          width:100%;
+          margin:0;
+          padding-top:5px !important;
+          align-self:inherit;
+        }
 
+        .center > h1{
+          font-size:20px;
+        }
+        .center > h2{
+          font-size:16px;
+        }
+    }
+
+
+    @media (max-width: 680px) {
+        lost-center: 520px;
+        .left {
+          text-align:center;
+        }
+        .left > .img-responsive {
+          width:150px;
+          margin-right:5px;
+        }
+        .center{
+          width:100%;
+          padding-top:5px;
+        }
+
+        .center > h1{
+          font-size:16px;
+        }
+        .center > h2{
+          font-size:12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        lost-center: 320px;
+        .left {
+          text-align:center;
+        }
+        .left > .img-responsive {
+          width:150px;
+          margin-right:5px;
+        }
+        .center{
+          width:100%;
+          padding-top:5px;
+        }
+
+        .center > h1{
+          font-size:12px;
+        }
+        .center > h2{
+          font-size:8px;
+        }
+    }
 
 
 }
 
-input{
-  height: 38px;
-  font-size: 12px;
-  line-height: 17px;
-  color: rgb(62, 62, 62);
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
-  padding: 5px 0px 5px 0px;
-  border-radius: 3px;
-  transition: none;
-  border-width: 1px;
-border-style: solid;
-border-color: rgb(204, 204, 204);
-border-image: initial;
+input {
+    height: 38px;
+    font-size: 12px;
+    line-height: 17px;
+    color: rgb(62, 62, 62);
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    padding: 5px 0px 5px 0px;
+    border-radius: 3px;
+    transition: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
 }
 
-
-
-.btn{
-font-family: 'Gotham Rounded', "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-weight: 700;
-font-size: 12px;
-line-height: 15px;
-letter-spacing: 1px;
-text-transform: uppercase;
-transition: all 0.3s ease;
-border-radius: 5px;
-padding: 13px 28px;
-border: 0;
+.btn {
+    font-family: 'Gotham Rounded', "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    padding: 13px 28px;
+    border: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-.btn-gradient{
-
-  @media (max-width: 615px) {
-      display:none;
-     }
-
-      float: right;
-      margin-left: -4px;
-      border-radius: 5px 5px 5px 5px;
-      color: white;
-      background: linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%) transparent;
+.btn-gradient {
+    float: right;
+    margin-left: -4px;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+    background: linear-gradient(to right, rgb(0, 108, 168) 0%, rgb(0, 109, 168) 1%, rgb(0, 148, 176) 51%, rgb(0, 148, 176) 100%) transparent;
+    @media (max-width: 1000px) {
+        display: none;
+    }
 }
 
-.btn:hover{
-  color: black;
-  background-color: transparent;
+.btn:hover {
+    color: black;
+    background-color: transparent;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-
-.video{
+.video {
     margin-top: 30px;
-    lost-center:1180px;
-    box-shadow: rgba(0, 0, 0, 0.560784) -2px 99px 57px -92px;
+    lost-center: 1180px;
+    .line {
+        margin-top: 20px;
+          @media (max-width: 480px) {
+            margin-top:10px;
+            height:2px;
 
+          }
+    }
     @media (max-width: 1500px) {
-      lost-center:1100px;
-         }
-
-    @media (max-width: 1320px) {
-      lost-center:1000px;
-        }
-
-    @media (max-width: 1070px) {
-          lost-center:800px;
-        }
+        lost-center: 1100px;
+    }
+    @media (max-width: 1280px) {
+        lost-center: 1000px;
+    }
 }
 
-.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.embed-container {
+    box-shadow: rgba(0, 0, 0, 0.560784) -2px 99px 57px -92px;
+    position: relative;
+  	padding-bottom: 56.25%; /* 16:9 */
+  	height: 0;
+    width:100% !important;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

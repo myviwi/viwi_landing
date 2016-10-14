@@ -162,8 +162,8 @@ gulp.task('watch', () => {
     gulp.watch(paths.handlebars, ['compile']);
     gulp.watch(paths.styles, ['styles']);
     gulp.watch(paths.scripts, ['scripts']);
-    gulp.watch(paths.contextJson)
-        .on('change', browserSync.reload);
-    gulp.watch(`${paths.buildDir}/**/*`)
-        .on('change', browserSync.reload);
+//    gulp.watch(paths.contextJson)
+//        .on('change', browserSync.reload);
+//    gulp.watch(`${paths.buildDir}/**/*`)
+//        .on('change', browserSync.reload);
 });
